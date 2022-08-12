@@ -27,14 +27,19 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
 }
 
 dependencies {
-    implementation "androidx.core:core-ktx:$rootProject.coreKtxVersion"
-    implementation "androidx.appcompat:appcompat:$rootProject.appCompatVersion"
-    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation "androidx.core:core-ktx:$coreKtxVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialVersion"
 
-    testImplementation "junit:junit:$rootProject.junitVersion"
-    androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoCoreVersion"
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
 }
